@@ -7,7 +7,7 @@
           item-value="category_id"
           v-model="defaultSelect"
           label="Select Category"
-          filled
+          outlined
           prepend-inner-icon="mdi-format-list-bulleted-square"
           @change="onChangeCategory"
           dense

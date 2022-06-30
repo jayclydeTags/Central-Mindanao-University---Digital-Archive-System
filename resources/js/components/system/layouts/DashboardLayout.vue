@@ -1,10 +1,11 @@
 <template>
     <v-app id="app">
         <navigation/>
-        <div class="main-content">
-            <dashboard-header/>
+        <!-- <dashboard-header/> -->
+
+        <v-main class="grey lighten-3">
             <dashboard-content/>
-        </div>
+        </v-main>
 
     </v-app>
 </template>
@@ -21,7 +22,9 @@ export default {
         DashboardContent,
         DashboardHeader,
     }
-    
+
 }
 </script>
+
+
 

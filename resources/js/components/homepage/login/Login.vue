@@ -1,37 +1,37 @@
 <template>
     <v-container>
-        <v-layout>
+        <!-- <v-layout>
             <div class="d-flex justify-start">
                 <v-btn text @click="$router.push({ name: 'homepage' })">
                     <v-icon>mdi-arrow-left</v-icon>Back to Home
                 </v-btn>
             </div>
-        </v-layout>
-        <v-layout row justify-center align-center class="mt-10">
-            <v-card max-width="800">
+        </v-layout> -->
+        <v-layout row justify-center align-center>
+            <v-card max-width="768" flat class="grey lighten-4">
+
                 <!-- Alert Message -->
                 <div v-if="msgStatus">
                     <alert-component />
                 </div>
+
                 <v-card-text>
-                    <h3 class="text-h6 text-uppercase">Login</h3>
-                    <p>
+                    <h3 class="text-h5 font-weight-bold text-uppercase grey--text text--darken-4">sign in</h3>
+                    <p class="text-body-2">
                         Welcome to CMU Archive, please input your
                         credentials below.
                     </p>
-                    <v-container>
+                    <v-container class="ma-0">
                         <v-form ref="form" @submit.prevent="save" v-model="rules.isValid" lazy-validation>
-                            <v-row class="mt-n6">
-                                <v-col cols="12">
-                                    <v-text-field v-model="form.email" label="Email" filled dense
+                            <v-row>
+                                <v-col cols="12" class="px-0">
+                                    <v-text-field v-model="form.email" label="Email" outlined dense
                                         prepend-inner-icon="mdi-email" :rules="rules.email" required>
                                     </v-text-field>
                                 </v-col>
-                            </v-row>
 
-                            <v-row class="mt-n6">
-                                <v-col cols="12">
-                                    <v-text-field label="Password" v-model="form.password" filled dense
+                                <v-col cols="12"  class="my-n6 px-0">
+                                    <v-text-field label="Password" v-model="form.password" outlined dense
                                         prepend-inner-icon="mdi-lock"
                                         :append-icon="showpass ? 'mdi-eye' : 'mdi-eye-off'"
                                         :type="showpass ? 'text' : 'password'" @click:append="showpass = !showpass"
@@ -41,29 +41,34 @@
                             </v-row>
                         </v-form>
                     </v-container>
-                    <a href="#" class="text-overline" @click="$router.push({
+
+                    <a class="text-overline text-decoration-none" @click="$router.push({
                         name: 'authentication',
                         params: { action: 'forgot-password' },
                     })">
                         Forgot password?
                     </a>
                 </v-card-text>
-                <!-- Form Buttons -->
 
-                <v-card-actions>
+                <!-- Form Buttons -->
+                <v-card-actions class="px-4">
                     <v-row>
-                        <v-col>
-                            <v-btn :disabled="!rules.isValid" dark @click="save" class="text-button">
-                                Login
+                        <v-col cols="12" lg="6">
+                            <v-btn :disabled="!rules.isValid" @click="save"
+                            class="grey darken-4 text-button grey--text text--lighten-5">
+                                sing in
                             </v-btn>
                         </v-col>
-                        <v-col cols="12" md="6" sm="4">
-                            <v-btn x-large width="100%" text @click="
-                                $router.push({
+                        <v-col cols="12" lg="6">
+                            <v-btn
+                                class="text-subtitle-2"
+                                text
+                                @click="$router.push({
                                     name: 'authentication',
                                     params: { action: 'register' },
-                                })
-                            ">Create an Account</v-btn>
+                                })">
+                                Create an Account
+                            </v-btn>
                         </v-col>
                     </v-row>
                 </v-card-actions>
@@ -177,15 +182,15 @@ export default {
 };
 </script>
 <style scoped>
-.img {
+/* .img {
     border: 1px solid #000;
 }
 
 .right-container {
-    /* background-image:url('../../../../../public/images/authentication.svg'); */
+    background-image:url('../../../../../public/images/authentication.svg');
     background-color: #21c65e;
     border: 1px solid #000;
-}
+} */
 
 ::v-deep .v-btn {
     padding-left: 12px;

@@ -7,7 +7,7 @@
           v-model="search"
           label="Search"
           dense
-          filled
+          outlined
           prepend-inner-icon="mdi-magnify"
         ></v-text-field>
       </v-card-title>
@@ -106,7 +106,7 @@
                         <v-text-field
                           v-model="form.request_id"
                           label="Name"
-                          filled
+                          outlined
                           disabled
                           dense
                           required
@@ -120,7 +120,7 @@
                           v-model="form.status"
                           required
                           dense
-                          filled
+                          outlined
                         ></v-select>
                       </v-col>
                     </v-row>

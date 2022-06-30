@@ -1,6 +1,6 @@
 <template>
-    <footer class="footer">
-      <div class="container">
+    <v-footer color="blue-grey darken-4 mt-10">
+      <v-container>
         <!-- <div class="row row-grid align-items-center">
           <div class="col-lg-6">
             <h3 class="text-yellow font-weight-light mb-2">Thank you for supporting us!</h3>
@@ -18,19 +18,17 @@
             </button>
           </div>
         </div> -->
-        <div class="row align-items-center justify-content-md-between">
-          <div class="col-md-6">
+        <div class="">
+          <div class="">
             <div class="copyright">
-              &copy; 2022 <a href="" target="_blank">Central Midanao University</a>.
+              <span class="green--text text--accent-4"> &copy; 2022 </span>
+              <a href="#" target="_blank" class="text-decoration-none green--text text--accent-4">Central Midanao University</a>.
             </div>
           </div>
         </div>
-      </div>
-    </footer>
+      </v-container>
+    </v-footer>
 </template>
 <style scoped>
-.footer {
-    background-color: #1e293b;
-    color:#fff;
-}
+
 </style>

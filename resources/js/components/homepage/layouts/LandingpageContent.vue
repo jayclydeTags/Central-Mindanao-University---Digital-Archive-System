@@ -1,9 +1,9 @@
 <template>
-    <div>
+    <v-container>
         <transition class="fade" enter-active-class="animate__animated animate__fadeIn" mode="out-in">
             <router-view></router-view>
         </transition>
-    </div>
+    </v-container>
 </template>
 <script>
 export default {

@@ -7,7 +7,7 @@
           v-model="search"
           label="Search"
           dense
-          filled
+          outlined
           prepend-inner-icon="mdi-magnify"
         ></v-text-field>
       </v-card-title>

@@ -4,7 +4,7 @@
             <v-card-title>
                 <select-file-category @selectcategory="getCategory"></select-file-category>
                 <v-spacer></v-spacer>
-                <v-text-field v-model="search" label="search" dense filled prepend-inner-icon="mdi-magnify">
+                <v-text-field v-model="search" label="search" dense outlined prepend-inner-icon="mdi-magnify">
                 </v-text-field>
             </v-card-title>
 
@@ -84,12 +84,12 @@
                                     <v-container>
                                         <div v-show="auth.user_type === 'Chief'">
                                             <v-form ref="form" @submit.prevent="save">
-                                                <v-alert filled type="info" prominent border="left">
+                                                <v-alert outlined type="info" prominent border="left">
                                                     Make sure to validate the file throughly before approving this file
                                                 </v-alert>
                                                 <v-select v-model="form.file_status" prepend-inner-icon="mdi-archive"
                                                     :items="selectItem" item-value="value" item-text="text" dense
-                                                    filled required select return-object>
+                                                    outlined required select return-object>
                                                 </v-select>
                                             </v-form>
                                         </div>
@@ -100,32 +100,36 @@
                                                     formTitle === 'Update File'
                                                 ">
 
-                                                    <v-text-field label="Filename" v-show="
+                                                    <label for="filename">Filename</label>
+                                                    <v-text-field v-show="
                                                         formTitle === 'New File' ||
                                                         formTitle === 'Update File'
                                                     " v-model="form.filename" :rules="rules.filename" @input="generateSlug"
-                                                        prepend-inner-icon="mdi-file" dense filled required>
+                                                        prepend-inner-icon="mdi-file" dense outlined required>
                                                     </v-text-field>
-                                                    <v-text-field label="Reference code" v-show="
+                                                    <label for="filecode">File Code</label>
+                                                    <v-text-field v-show="
                                                         formTitle === 'New File' ||
                                                         formTitle === 'Update File'
-                                                    " v-model="form.code" :rules="rules.code" prepend-inner-icon="mdi-file-code" dense filled
+                                                    " v-model="form.code" :rules="rules.code" prepend-inner-icon="mdi-file-code" dense outlined
                                                         required>
                                                     </v-text-field>
-                                                    <v-text-field label="Slug" v-show="
+                                                    <label for="slug">Slug</label>
+                                                    <v-text-field v-show="
                                                         formTitle === 'New File' ||
                                                         formTitle === 'Update File'
                                                     " v-model="form.slug" :rules="rules.slug" disabled
-                                                        prepend-inner-icon="mdi-information-outline" dense filled
+                                                        prepend-inner-icon="mdi-information-outline" dense outlined
                                                         required>
                                                     </v-text-field>
 
-                                                    <v-select label="Category" v-show="
+                                                    <label for="category">Category</label>
+                                                    <v-select v-show="
                                                         formTitle === 'New File' ||
                                                         formTitle === 'Update File'
                                                     " :items="category.filecategory" item-text="category" item-value="category_id"
                                                         v-model="form.category_id"
-                                                        prepend-inner-icon="mdi-information-outline" filled dense>
+                                                        prepend-inner-icon="mdi-information-outline" outlined dense>
                                                     </v-select>
 
                                                     <label for="doctype">Document Type</label>
@@ -134,7 +138,7 @@
                                                         formTitle === 'Update File'
                                                     " prepend-inner-icon="mdi-file-sign" :items="document_type" label="Select Document Type"
                                                         v-model="form.document_type" :rules="rules.document_type" dense
-                                                        required filled>
+                                                        required outlined>
                                                     </v-select>
 
                                                     <label for="desc">Description</label>
@@ -157,7 +161,7 @@
                                                                 formTitle === 'New File' ||
                                                                 formTitle === 'Update File'
                                                             " v-model="date" prepend-inner-icon="mdi-calendar" :rules="rules.retention_date" readonly
-                                                                filled dense v-bind="attrs" v-on="on"></v-text-field>
+                                                                outlined dense v-bind="attrs" v-on="on"></v-text-field>
                                                         </template>
                                                         <v-date-picker v-model="date" :active-picker.sync="activePicker"
                                                             min="1900-01-01" @change="saveDate"></v-date-picker>
@@ -209,7 +213,7 @@
                                         Confirmation
                                     </v-toolbar-title>
                                 </v-toolbar>
-                                <v-alert filled type="error" prominent border="left">
+                                <v-alert outlined type="error" prominent border="left">
                                     Once this file is archived this cannot be deleted in the system.
                                     It's recommended those permanent records.
                                 </v-alert>
@@ -304,11 +308,7 @@ export default {
                 },
                 { text: "File Name", value: "filename", class: "info text-black" },
                 { text: "Description", value: "description", class: "info text-black" },
-                {
-                    text: "Slug",
-                    value: "slug",
-                    class: "info text-black"
-                },
+                { text: "Slug", value: "slug", class: "info text-black" },
                 { text: "Category", value: "category", class: "info text-black" },
                 { text: "Date Created", value: "created_at", class: "info text-black" },
                 {
@@ -397,11 +397,14 @@ export default {
             if (this.category_id === 0) {
                 const files = this.$store.getters.getAllDocs;
                 return this._.orderBy(files, ["created_at"], ["desc"]);
+
             } else {
                 const files = this.$store.getters.filterFilesByCategory(
                     this.category_id
                 );
                 return this._.orderBy(files, ["created_at"], ["desc"]);
+
+
             }
         },
 
@@ -477,7 +480,7 @@ export default {
         //EDIT FILE DATA
         /*     getUserID(event) {
 
-          this.form.user_id = event.target.value
+            this.form.user_id = event.target.value
 
         }, */
         editItem(item) {
@@ -488,7 +491,6 @@ export default {
             this.dialog = true;
             this.editedIndex = 0;
         },
-
         editFileLocation(item) {
             this.dialog = true;
 
@@ -498,19 +500,19 @@ export default {
 
         //GENERATE FILE CODE
         /* generateFileCode(event) {
-          if (event) {
+            if (event) {
             let filename = this.form.filename;
 
             let generatedcode =
-              filename.toUpperCase().slice(0, 3) +
-              Math.floor(Math.random() * 100000000000);
+                filename.toUpperCase().slice(0, 3) +
+                Math.floor(Math.random() * 100000000000);
 
             if (filename === "") {
-              this.form.code = "";
+                this.form.code = "";
             } else {
-              this.form.code = generatedcode;
+                this.form.code = generatedcode;
             }
-          }
+            }
         }, */
 
         //DELETE FILE DATA

@@ -6,7 +6,7 @@
         <v-text-field
           v-model="search"
           label="Search"
-          filled
+          outlined
           dense
           prepend-inner-icon="mdi-magnify"
         ></v-text-field>

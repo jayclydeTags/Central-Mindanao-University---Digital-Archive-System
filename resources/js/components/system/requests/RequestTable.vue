@@ -7,7 +7,7 @@
           v-model="search"
           label="Search"
           dense
-          filled
+          outlined
           prepend-inner-icon="mdi-magnify"
         ></v-text-field>
       </v-card-title>
@@ -488,4 +488,3 @@ export default {
   background-color: #1E88E5;
 }
 </style>
-

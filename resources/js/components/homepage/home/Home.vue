@@ -1,5 +1,59 @@
 <template>
-    <div>
+    <v-container>
+        <v-row>
+            <v-col cols="12" md="7">
+                <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                    <h5 class="text-overline font-weight-bold text-uppercase green--text">Central Mindanao University</h5>
+                </div>
+                <div data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                    <h1 class="text-sm-h3 text-h4 font-weight-bold grey--text text--darken-4 text-uppercase head">Digital Archive System
+                    </h1>
+                </div>
+                <div>
+                    <p><span class="green--text">Students</span>, <span class="green--text">Faculty</span> and <span
+                            class="green--text">Alumnus</span> can now access documents through this online platform.
+                    </p>
+                </div>
+                <div>
+                    <ul class="list-unstyled pa-0 pl-md-4">
+                        <li v-for="(item, i) in items" :key="i" class="d-flex mb-md-4">
+                            <v-icon v-text="item.icon" color="yellow darken-3" class="mr-2 mr-md-4"></v-icon>
+                            <p class="subtitle-2 ma-0" v-text="item.text"></p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="mt-10" data-aos="fade-up">
+                    <v-row>
+                        <v-col cols="12" sm="3">
+                            <v-btn block large class="green">
+                                <router-link :to="redirectLogin" class="text-decoration-none">
+                                    <span class="grey--text text--lighten-5">LOGIN</span>
+                                </router-link>
+                            </v-btn>
+                        </v-col>
+                        <v-col cols="12" sm="3">
+                            <v-btn block large outlined>
+                                <router-link :to="redirectRegister" class="text-decoration-none">
+                                    <span class=" grey--text text--darken-4">REGISTER</span>
+                                </router-link>
+                            </v-btn>
+                        </v-col>
+                    </v-row>
+                </div>
+
+            </v-col>
+
+            <v-col cols="12" md="5" class="d-none d-md-block">
+                <div data-aos="fade-left">
+                    <figure>
+                        <v-img :src="personalfiles" class="figure-img img-fluid" width="100%" />
+                    </figure>
+                </div>
+            </v-col>
+        </v-row>
+    </v-container>
+    <!-- <div>
         <div class="section section-hero section-shaped">
             <div class="page-header">
                 <div class="container shape-container align-items-center py-lg">
@@ -8,11 +62,11 @@
                         <div class="col-md-8 mt-15">
                             <div class="col-lg-12">
                                 <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
-                                    <h6 class="text-overline title">Central Mindanao University</h6>
+                                    <h6 class="overline font-weight-bold text-uppercase green--text">Central Mindanao University</h6>
                                 </div>
 
                                 <div data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
-                                    <h3 class="display-6 subtitle">Digital Archiving System</h3>
+                                    <h1 class="dispay-6 font-weight-bold grey--text text--darken-4 text-uppercase head">Digital Archiving System</h1>
                                 </div>
                                 <div data-aos="fade-up" data-aos-duration="3000">
                                     <p class="
@@ -43,7 +97,7 @@
 
                                 </div>
 
-                                <div class="mt-10" data-aos="fade-up" data-aos-duration="2000">
+                                <div class="mt-10" data-aos="fade-up">
 
                                     <v-btn elevation="10" large dark class="text-decoration">
                                         <router-link :to="redirectLogin">
@@ -72,18 +126,15 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 </template>
 <style scoped>
-.home {
+/* .home {
     background-image: url("../../../../../public/assets/img/banner2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.sub-text {
-    color: #21c65e;
-}
 
 .btn-bg-green {
     background-color: #21c65e;
@@ -101,22 +152,15 @@
 .bg-yellow {
     background: linear-gradient(150deg, #d4eb0d 15%, #ddbd0a 70%, #ddc409 94%);
     opacity: 0.3;
+} */
+
+
+
+.head {
+    font-family: 'Roboto Mono', monospace !important;
 }
 
-.title {
-    color: #16A34A;
-    text-transform: uppercase;
-}
-
-.subtitle {
-    color: #21c65e;
-    text-transform: uppercase;
-    font-size: 3rem;
-    font-weight: bold;
-    color: #000000;
-}
-
-.office-img {
+/* .office-img {
     width: 450px;
     height: 250px;
 }
@@ -128,14 +172,14 @@
 .text-decoration a {
     text-decoration: none;
     color: inherit;
-}
+} */
 </style>
 
 <script>
 
 import Login from "./../account/Login.vue";
 import Register from "./../account/Register.vue";
-import office from "../../../../../public/assets/img/office/office.png";
+// import office from "../../../../../public/assets/img/office/office.png";
 import personalfiles from "../../../../../public/images/personalfiles.svg";
 export default {
     components: {
@@ -144,7 +188,7 @@ export default {
     },
     data() {
         return {
-            officeicon: office,
+            // officeicon: office,
             personalfiles: personalfiles,
             selectedItem: 1,
             lockSelection: true,
@@ -152,15 +196,15 @@ export default {
             items: [
                 {
                     text: "Students can request document related to their studies.",
-                    icon: "mdi-circle-double",
+                    icon: "mdi-radiobox-marked",
                 },
                 {
                     text: "Available documents for research and extension.",
-                    icon: "mdi-circle-double",
+                    icon: "mdi-radiobox-marked",
                 },
                 {
                     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-                    icon: "mdi-circle-double",
+                    icon: "mdi-radiobox-marked",
                 },
             ],
             /* items: [
