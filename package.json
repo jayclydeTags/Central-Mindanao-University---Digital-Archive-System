@@ -8,8 +8,7 @@
         "hot": "mix watch --hot",
         "prod": "npm run production",
         "production": "mix --production",
-        "move-static": "cp -a ./node_modules/@pdftron/webviewer/public/. ./dist/public/webviewer",
-        "build": "mybuildscript && npm run move-static"
+        "move-static": "cp -a ./node_modules/@pdftron/webviewer/public/. ./dist/public/webviewer"
     },
     "devDependencies": {
         "@popperjs/core": "^2.10.2",
