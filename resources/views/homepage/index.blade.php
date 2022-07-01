@@ -3,24 +3,24 @@
 
 <head>
     <meta charset="utf-8">
+    <title> CMU | Digital Archive System </title>
+    <meta name="title" content="CMU | Digital Archive System">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Its an archive system the provides access and keeping the university records.">
     <meta name="keywords" content="CMU, Archive, Digital Archive System, DAS, Archive System, Records Management, Central Mindanao University">
     <meta name="copyright" content="CMU Records Management Unit 2022">
-    <meta name="title" content="CMU | Digital Archive System">
+    <meta name="robots" content="index, follow" />
 
     <meta name="csrf-token" content="{{csrf_token()}}">
 
-    <meta name="robots" content="index, follow" />
 
-    <title> CMU | Digital Archive System </title>
-    <link href="{{ asset('css/app.css')}}" rel="stylesheet">
+    <link href="{{ asset('css/app.css')}}" rel="stylesheet" @disabled(true) media="all">
     <!-- Favicon -->
     <link href="{{asset('assets/img/cmulogo.png')}}" rel="icon" type="image/png">
 
     <!-- Fonts -->
     <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet"> -->
-    {{-- <link rel="preconnect" href="https://fonts.googleapis.com"> --}}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     {{-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> --}}
     {{-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto+Mono:wght@400;500;600;700&display=swap" rel="stylesheet"> --}}
 
@@ -41,7 +41,6 @@
     {{-- <link href="{{asset('landingpage/css/argon-design-system.css?v=1.2.2')}}" rel="stylesheet" /> --}}
 
     <!-- PDF VIEWER -->
-    <script src="https://mozilla.github.io/pdf.js/build/pdf.js" crossorigin="anonymous"></script>
     <link href="https://mozilla.github.io/pdf.js/web/viewer.css" rel="stylesheet" type="text/css" />
 
 
@@ -92,6 +91,9 @@
     {{-- <script src="{{asset('landingpage/js/argon-design-system.js')}}" type="text/javascript"></script> --}}
     <script src="https://cdn.trackjs.com/agent/v3/latest/t.js">
     </script>
+    {{-- PDF viewer --}}
+    <script src="https://mozilla.github.io/pdf.js/build/pdf.js" crossorigin="anonymous"></script>
+
 
 
 </body>
