@@ -48,7 +48,7 @@
             </v-col>
 
             <v-col cols="12" md="8">
-                <v-card elevation="4" class="pa-4 rounded-lg" data-aos="fade-left">
+                <v-card elevation="4" class="pa-md-4 pa-1 rounded-lg" data-aos="fade-left">
                     <div v-if="msgStatus">
                         <alert-component />
                     </div>

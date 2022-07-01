@@ -320,7 +320,7 @@ export default {
                 var count = Object.keys(files).length;
                 if (count === 0) {
                     this.showcateg_msg = true;
-                    this.msg = "No documents found in this category";
+                    this.msg = "No documents found.";
                 } else {
                     this.showcateg_msg = false;
                 }

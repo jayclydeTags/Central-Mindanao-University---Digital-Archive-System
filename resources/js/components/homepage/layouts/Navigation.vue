@@ -7,7 +7,7 @@
 
             <v-toolbar-title>
                 <a class="text-decoration-none grey--text text--lighten-5" href="#">
-                    <span class="font-weight-medium">CMU Digital Archive System</span>
+                    <span class="font-weight-medium">Digital Archive System</span>
                 </a>
             </v-toolbar-title>
 

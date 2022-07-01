@@ -26,7 +26,7 @@
             <v-col cols="12" md="7">
                 <v-row>
                     <v-col cols="12" >
-                        <v-card class="mx-auto pa-xs-4 pa-md-6"
+                        <v-card class="mx-auto pa-xs-4 pa-md-6 rounded-lg"
                             :color="archives_mission"
                             flat
                             shaped
@@ -46,7 +46,7 @@
                         </v-card>
                     </v-col>
                     <v-col cols="12">
-                        <v-card class="mx-auto pa-xs-4 pa-md-6"
+                        <v-card class="mx-auto pa-xs-4 pa-md-6 rounded-lg"
                             :color="rmu_mission"
                             flat
                             shaped

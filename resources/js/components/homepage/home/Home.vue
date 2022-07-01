@@ -11,7 +11,7 @@
                 </div>
                 <div>
                     <p><span class="green--text">Students</span>, <span class="green--text">Faculty</span> and <span
-                            class="green--text">Alumnus</span> can now access documents through this online platform.
+                            class="green--text">Alumnus</span> can now access records through this online platform.
                     </p>
                 </div>
                 <div>
@@ -195,15 +195,15 @@ export default {
             inactiveClass: true,
             items: [
                 {
-                    text: "Students can request document related to their studies.",
+                    text: "Students can request records related to their studies.",
                     icon: "mdi-radiobox-marked",
                 },
                 {
-                    text: "Available documents for research and extension.",
+                    text: "Available records for research and extension.",
                     icon: "mdi-radiobox-marked",
                 },
                 {
-                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+                    text: "Faculties records available to help improve their learning and providing unique materials for quality education.",
                     icon: "mdi-radiobox-marked",
                 },
             ],

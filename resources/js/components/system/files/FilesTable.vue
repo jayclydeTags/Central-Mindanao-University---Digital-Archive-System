@@ -52,7 +52,7 @@
                     <v-toolbar flat>
                         <!-- FILES MANAGEMENT MODALS -->
 
-                        <v-dialog v-model="dialog" max-width="80%">
+                        <v-dialog v-model="dialog" max-width="40%">
                             <!-- ADD NEW FILE BUTTON -->
 
                             <template v-slot:activator="{ on, attrs }">
