@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Its an archive system the provides access and keeping the university records.">
-    <meta name="keywords" content="CMU, Archive, Digital Archive System, DAS, Archive System, Records Management">
+    <meta name="keywords" content="CMU, Archive, Digital Archive System, DAS, Archive System, Records Management, Central Mindanao University">
     <meta name="copyright" content="CMU Records Management Unit 2022">
     <meta name="title" content="CMU | Digital Archive System">
 
