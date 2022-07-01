@@ -4,9 +4,16 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Its an archive system the provides access and keeping the university records.">
+    <meta name="keywords" content="CMU, Archive, Digital Archive System, DAS, Archive System, Records Management">
+    <meta name="copyright" content="CMU Records Management Unit 2022">
+    <meta name="title" content="CMU | Digital Archive System">
+
     <meta name="csrf-token" content="{{csrf_token()}}">
 
-    <title> CMU | Digital Archiving System </title>
+    <meta name="robots" content="index, follow" />
+
+    <title> CMU | Digital Archive System </title>
     <link href="{{ asset('css/app.css')}}" rel="stylesheet">
     <!-- Favicon -->
     <link href="{{asset('assets/img/cmulogo.png')}}" rel="icon" type="image/png">
